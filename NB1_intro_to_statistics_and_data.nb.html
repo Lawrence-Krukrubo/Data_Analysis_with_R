@@ -1755,152 +1755,395 @@ summary {
 <p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Ctrl+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>To see an example of the mean function</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhhbXBsZShtZWFuKVxuYGBgIn0= -->
-<pre class="r"><code>example(mean)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5tZWFuPiB4IDwtIGMoMDoxMCwgNTApXG5cbm1lYW4+IHhtIDwtIG1lYW4oeClcblxubWVhbj4gYyh4bSwgbWVhbih4LCB0cmltID0gMC4xMCkpXG5bMV0gOC43NSA1LjUwXG4ifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucGxvdChjYXJzKVxuYGBgXG5gYGAifQ== -->
+<pre class="r"><code>```r
+plot(cars)</code></pre>
 <pre><code>
-mean&gt; x &lt;- c(0:10, 50)
+&lt;!-- rnb-source-end --&gt;
 
-mean&gt; xm &lt;- mean(x)
+&lt;!-- rnb-chunk-end --&gt;
 
-mean&gt; c(xm, mean(x, trim = 0.10))
-[1] 8.75 5.50</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Vectors can be assigned to an “object”. For example,</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWCA8LSBjKDIsMTIsMjIsMzIsNDIpICAjIGMoKSBpcyBhIHZlY3RvclxudHlwZW9mKFgpXG5gYGAifQ== -->
-<pre class="r"><code>X &lt;- c(2,12,22,32,42)  # c() is a vector
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+
+To see an example of the mean function
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuZXhhbXBsZShtZWFuKVxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+example(mean)</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiXG5tZWFuPiB4IDwtIGMoMDoxMCwgNTApXG5cbm1lYW4+IHhtIDwtIG1lYW4oeClcblxubWVhbj4gYyh4bSwgbWVhbih4LCB0cmltID0gMC4xMCkpXG5bMV0gOC43NSA1LjUwXG4ifQ== --&gt;
+</code></pre>
+<p>mean&gt; x &lt;- c(0:10, 50)</p>
+<p>mean&gt; xm &lt;- mean(x)</p>
+<p>mean&gt; c(xm, mean(x, trim = 0.10)) [1] 8.75 5.50</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+Vectors can be assigned to an “object”. For example,
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuWCA8LSBjKDIsMTIsMjIsMzIsNDIpICAjIGMoKSBpcyBhIHZlY3RvclxudHlwZW9mKFgpXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+X &lt;- c(2,12,22,32,42)  # c() is a vector
 typeof(X)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZG91YmxlXCJcbiJ9 -->
-<pre><code>[1] &quot;double&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Sequences of numbers can be created using the seq and rep commands. For example,</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2VxKDEsMTApICAjIEJvdGggZmlyc3QgYW5kIGxhc3QgaXRlbXMgaW5jbHVzaXZlLlxuYGBgIn0= -->
-<pre class="r"><code>seq(1,10)  # Both first and last items inclusive.</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAgMSAgMiAgMyAgNCAgNSAgNiAgNyAgOCAgOSAxMFxuIn0= -->
-<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVwKDEsMTApICAjIFJlcGVhdHMgZmlyc3QgaXRlbSBzZWNvbmQgaXRlbSB0aW1lc1xuYGBgIn0= -->
-<pre class="r"><code>rep(1,10)  # Repeats first item second item times</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAxIDEgMSAxIDEgMSAxIDEgMSAxXG4ifQ== -->
-<pre><code> [1] 1 1 1 1 1 1 1 1 1 1</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Basic data structures are vectors, matrices, arrays, lists, and data frames. They can contain numeric values, logical values or even characters (strings). In the latter case, arithmetic operations are not allowed.</p>
-<p>A numeric vector of length 5 can be constructed by the command</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWCA8LSB2ZWN0b3IobW9kZT0nbnVtZXJpYycsIGxlbmd0aCA9IDUpXG5YXG5gYGAifQ== -->
-<pre class="r"><code>X &lt;- vector(mode=&#39;numeric&#39;, length = 5)
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiWzFdIFxcZG91YmxlXFxcbiJ9 --&gt;
+</code></pre>
+<p>[1] <br />
+</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+Sequences of numbers can be created using the seq and rep commands. For
+example,
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuc2VxKDEsMTApICAjIEJvdGggZmlyc3QgYW5kIGxhc3QgaXRlbXMgaW5jbHVzaXZlLlxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+seq(1,10)  # Both first and last items inclusive.</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAgMSAgMiAgMyAgNCAgNSAgNiAgNyAgOCAgOSAxMFxuIn0= --&gt;
+</code></pre>
+<p>[1] 1 2 3 4 5 6 7 8 9 10</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucmVwKDEsMTApICAjIFJlcGVhdHMgZmlyc3QgaXRlbSBzZWNvbmQgaXRlbSB0aW1lc1xuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+rep(1,10)  # Repeats first item second item times</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAxIDEgMSAxIDEgMSAxIDEgMSAxXG4ifQ== --&gt;
+</code></pre>
+<p>[1] 1 1 1 1 1 1 1 1 1 1</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+Basic data structures are vectors, matrices, arrays, lists, and data frames. 
+They can contain numeric values, logical values or even characters (strings). 
+In the latter case, arithmetic operations are not allowed.
+
+A numeric vector of length 5 can be constructed by the command
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuWCA8LSB2ZWN0b3IobW9kZT0nbnVtZXJpYycsIGxlbmd0aCA9IDUpXG5YXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+X &lt;- vector(mode=&#39;numeric&#39;, length = 5)
 X</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAgMCAwIDAgMFxuIn0= -->
-<pre><code>[1] 0 0 0 0 0</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Logical vectors containing the values TRUE and FALSE are also possible. Also note that R language supports 1 based indexing, not 0 like Python.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWCA8LSB2ZWN0b3IobW9kZT0nbG9naWNhbCcsIGxlbmd0aCA9IDQpXG5YXG5gYGAifQ== -->
-<pre class="r"><code>X &lt;- vector(mode=&#39;logical&#39;, length = 4)
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAgMCAwIDAgMFxuIn0= --&gt;
+</code></pre>
+<p>[1] 0 0 0 0 0</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+Logical vectors containing the values TRUE and FALSE are also possible.
+Also note that R language supports 1 based indexing, not 0 like Python.
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuWCA8LSB2ZWN0b3IobW9kZT0nbG9naWNhbCcsIGxlbmd0aCA9IDQpXG5YXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+X &lt;- vector(mode=&#39;logical&#39;, length = 4)
 X</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFXG4ifQ== -->
-<pre><code>[1] FALSE FALSE FALSE FALSE</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWFsxXSA9IFhbMl0gPSBYWzRdID0gVFJVRVxubWVhbihYKVxuYGBgIn0= -->
-<pre class="r"><code>X[1] = X[2] = X[4] = TRUE
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFIEZBTFNFIEZBTFNFIEZBTFNFXG4ifQ== --&gt;
+</code></pre>
+<p>[1] FALSE FALSE FALSE FALSE</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuWFsxXSA9IFhbMl0gPSBYWzRdID0gVFJVRVxubWVhbihYKVxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+X[1] = X[2] = X[4] = TRUE
 mean(X)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAuNzVcbiJ9 -->
-<pre><code>[1] 0.75</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>A matrix can be constructed by the matrix() command:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWCA8LSBtYXRyaXgobnJvdz00LCBuY29sPTIsIGRhdGE9c2VxKDEsOCksIGJ5cm93ID0gVClcblhcbmBgYCJ9 -->
-<pre class="r"><code>X &lt;- matrix(nrow=4, ncol=2, data=seq(1,8), byrow = T)
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAuNzVcbiJ9 --&gt;
+</code></pre>
+<p>[1] 0.75</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+A matrix can be constructed by the matrix() command:
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuWCA8LSBtYXRyaXgobnJvdz00LCBuY29sPTIsIGRhdGE9c2VxKDEsOCksIGJ5cm93ID0gVClcblhcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+X &lt;- matrix(nrow=4, ncol=2, data=seq(1,8), byrow = T)
+X</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl1cblsxLF0gICAgMSAgICAyXG5bMixdICAgIDMgICAgNFxuWzMsXSAgICA1ICAgIDZcbls0LF0gICAgNyAgICA4XG4ifQ== --&gt;
+</code></pre>
+<pre><code> [,1] [,2]</code></pre>
+<p>[1,] 1 2 [2,] 3 4 [3,] 5 6 [4,] 7 8</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+The above can also be written as:
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuWCA8LSBtYXRyaXgoNCwgMiwgZGF0YT0xOjgsIGJ5cm93ID0gVFJVRSlcblhcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+X &lt;- matrix(4, 2, data=1:8, byrow = TRUE)
+X</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl1cblsxLF0gICAgMSAgICAyXG5bMixdICAgIDMgICAgNFxuWzMsXSAgICA1ICAgIDZcbls0LF0gICAgNyAgICA4XG4ifQ== --&gt;
+</code></pre>
+<pre><code> [,1] [,2]</code></pre>
+<p>[1,] 1 2 [2,] 3 4 [3,] 5 6 [4,] 7 8</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+Arrays are more general data structures than vectors and matrices in the sense
+that they can have more than two dimensions. For instance,
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuWCA8LSBhcnJheShkYXRhID0gMToxMiwgZGltID0gYygzLDIsMikpXG5YXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+X &lt;- array(data = 1:12, dim = c(3,2,2))
+X</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiLCAsIDFcblxuICAgICBbLDFdIFssMl1cblsxLF0gICAgMSAgICA0XG5bMixdICAgIDIgICAgNVxuWzMsXSAgICAzICAgIDZcblxuLCAsIDJcblxuICAgICBbLDFdIFssMl1cblsxLF0gICAgNyAgIDEwXG5bMixdICAgIDggICAxMVxuWzMsXSAgICA5ICAgMTJcbiJ9 --&gt;
+</code></pre>
+<p>, , 1</p>
+<pre><code> [,1] [,2]</code></pre>
+<p>[1,] 1 4 [2,] 2 5 [3,] 3 6</p>
+<p>, , 2</p>
+<pre><code> [,1] [,2]</code></pre>
+<p>[1,] 7 10 [2,] 8 11 [3,] 9 12</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+A list can contain objects of different types. For example, a list element can 
+be a vector or matrix. Lists can be initialized by the command list and can grow
+dynamically. It is important to understand that list elements should be accessed
+by the name of the entry via the dollar sign or using double brackets:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWCA8LSBsaXN0KG9uZT1jKDEsMiwzLDQsNSksIGNhcnM9YygnbWF6ZGEnLCdiZW50bGV5JywnZmVycmFyaScsJ2tpYScpKVxuWFxuYGBgIn0= --&gt;
+
+```r
+X &lt;- list(one=c(1,2,3,4,5), cars=c(&#39;mazda&#39;,&#39;bentley&#39;,&#39;ferrari&#39;,&#39;kia&#39;))
 X</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl1cblsxLF0gICAgMSAgICAyXG5bMixdICAgIDMgICAgNFxuWzMsXSAgICA1ICAgIDZcbls0LF0gICAgNyAgICA4XG4ifQ== -->
-<pre><code>     [,1] [,2]
-[1,]    1    2
-[2,]    3    4
-[3,]    5    6
-[4,]    7    8</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiJG9uZVxuWzFdIDEgMiAzIDQgNVxuXG4kY2Fyc1xuWzFdIFwibWF6ZGFcIiAgIFwiYmVudGxleVwiIFwiZmVycmFyaVwiIFwia2lhXCIgICAgXG4ifQ== -->
+<pre><code>$one
+[1] 1 2 3 4 5
+
+$cars
+[1] &quot;mazda&quot;   &quot;bentley&quot; &quot;ferrari&quot; &quot;kia&quot;    </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWFsxXVxuYGBgIn0= -->
+<pre class="r"><code>X[1]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJG9uZVxuWzFdIDEgMiAzIDQgNVxuIn0= -->
+<pre><code>$one
+[1] 1 2 3 4 5</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWCRvbmVcbmBgYCJ9 -->
+<pre class="r"><code>X$one</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgMiAzIDQgNVxuIn0= -->
+<pre><code>[1] 1 2 3 4 5</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>The above can also be written as:</p>
+<p>Let’s index cars</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWCA8LSBtYXRyaXgoNCwgMiwgZGF0YT0xOjgsIGJ5cm93ID0gVFJVRSlcblhcbmBgYCJ9 -->
-<pre class="r"><code>X &lt;- matrix(4, 2, data=1:8, byrow = TRUE)
-X</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWCRjYXJzXG5gYGAifQ== -->
+<pre class="r"><code>X$cars</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl1cblsxLF0gICAgMSAgICAyXG5bMixdICAgIDMgICAgNFxuWzMsXSAgICA1ICAgIDZcbls0LF0gICAgNyAgICA4XG4ifQ== -->
-<pre><code>     [,1] [,2]
-[1,]    1    2
-[2,]    3    4
-[3,]    5    6
-[4,]    7    8</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibWF6ZGFcIiAgIFwiYmVudGxleVwiIFwiZmVycmFyaVwiIFwia2lhXCIgICAgXG4ifQ== -->
+<pre><code>[1] &quot;mazda&quot;   &quot;bentley&quot; &quot;ferrari&quot; &quot;kia&quot;    </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Arrays are more general data structures than vectors and matrices in the sense that they can have more than two dimensions. For instance,</p>
+<p>let’s select only Ferrari.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWCA8LSBhcnJheShkYXRhID0gMToxMiwgZGltID0gYygzLDIsMikpXG5YXG5gYGAifQ== -->
-<pre class="r"><code>X &lt;- array(data = 1:12, dim = c(3,2,2))
-X</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWCRjYXJzWzNdXG5gYGAifQ== -->
+<pre class="r"><code>X$cars[3]</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiLCAsIDFcblxuICAgICBbLDFdIFssMl1cblsxLF0gICAgMSAgICA0XG5bMixdICAgIDIgICAgNVxuWzMsXSAgICAzICAgIDZcblxuLCAsIDJcblxuICAgICBbLDFdIFssMl1cblsxLF0gICAgNyAgIDEwXG5bMixdICAgIDggICAxMVxuWzMsXSAgICA5ICAgMTJcbiJ9 -->
-<pre><code>, , 1
-
-     [,1] [,2]
-[1,]    1    4
-[2,]    2    5
-[3,]    3    6
-
-, , 2
-
-     [,1] [,2]
-[1,]    7   10
-[2,]    8   11
-[3,]    9   12</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZmVycmFyaVwiXG4ifQ== -->
+<pre><code>[1] &quot;ferrari&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>A list can contain objects of different types. For example, a list element can be a vector or matrix. Lists can be initialized by the command list and can grow dynamically. It is important to understand that list elements should be accessed by the name of the entry via the dollar sign or using double brackets:</p>
+<p>some more</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuWFtbMl1dXG5gYGAifQ== -->
+<pre class="r"><code>X[[2]]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibWF6ZGFcIiAgIFwiYmVudGxleVwiIFwiZmVycmFyaVwiIFwia2lhXCIgICAgXG4ifQ== -->
+<pre><code>[1] &quot;mazda&quot;   &quot;bentley&quot; &quot;ferrari&quot; &quot;kia&quot;    </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIk5CMV9pbnRyb190b19zdGF0aXN0aWNzX2FuZF9kYXRhIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQphdXRob3I6ICJMYXdyZW5jZSBLcnVrcnVibyINCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiANCg0KYGBge3J9DQpwbG90KGNhcnMpDQpgYGANCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLg0KDQoNClRvIHNlZSBhbiBleGFtcGxlIG9mIHRoZSBtZWFuIGZ1bmN0aW9uDQoNCmBgYHtyfQ0KZXhhbXBsZShtZWFuKQ0KYGBgDQpWZWN0b3JzIGNhbiBiZSBhc3NpZ25lZCB0byBhbiDigJxvYmplY3TigJ0uIEZvciBleGFtcGxlLA0KYGBge3J9DQpYIDwtIGMoMiwxMiwyMiwzMiw0MikgICMgYygpIGlzIGEgdmVjdG9yIG9mIGRvdWJsZXMNCnR5cGVvZihYKQ0KYGBgDQoNClNlcXVlbmNlcyBvZiBudW1iZXJzIGNhbiBiZSBjcmVhdGVkIHVzaW5nIHRoZSBzZXEgYW5kIHJlcCBjb21tYW5kcy4gRm9yDQpleGFtcGxlLA0KYGBge3J9DQpzZXEoMSwxMCkgICMgQm90aCBmaXJzdCBhbmQgbGFzdCBpdGVtcyBpbmNsdXNpdmUuDQpyZXAoMSwxMCkgICMgUmVwZWF0cyBmaXJzdCBpdGVtIHNlY29uZCBpdGVtIHRpbWVzDQpgYGANCkJhc2ljIGRhdGEgc3RydWN0dXJlcyBhcmUgdmVjdG9ycywgbWF0cmljZXMsIGFycmF5cywgbGlzdHMsIGFuZCBkYXRhIGZyYW1lcy4gDQpUaGV5IGNhbiBjb250YWluIG51bWVyaWMgdmFsdWVzLCBsb2dpY2FsIHZhbHVlcyBvciBldmVuIGNoYXJhY3RlcnMgKHN0cmluZ3MpLiANCkluIHRoZSBsYXR0ZXIgY2FzZSwgYXJpdGhtZXRpYyBvcGVyYXRpb25zIGFyZSBub3QgYWxsb3dlZC4NCg0KQSBudW1lcmljIHZlY3RvciBvZiBsZW5ndGggNSBjYW4gYmUgY29uc3RydWN0ZWQgYnkgdGhlIGNvbW1hbmQNCmBgYHtyfQ0KWCA8LSB2ZWN0b3IobW9kZT0nbnVtZXJpYycsIGxlbmd0aCA9IDUpDQpYDQpgYGANCkxvZ2ljYWwgdmVjdG9ycyBjb250YWluaW5nIHRoZSB2YWx1ZXMgVFJVRSBhbmQgRkFMU0UgYXJlIGFsc28gcG9zc2libGUuDQpBbHNvIG5vdGUgdGhhdCBSIGxhbmd1YWdlIHN1cHBvcnRzIDEgYmFzZWQgaW5kZXhpbmcsIG5vdCAwIGxpa2UgUHl0aG9uLg0KYGBge3J9DQpYIDwtIHZlY3Rvcihtb2RlPSdsb2dpY2FsJywgbGVuZ3RoID0gNCkgICMgRkFMU0U9MCwgVFJVRT0xDQpYDQpgYGANCmBgYHtyfQ0KWFsxXSA9IFhbMl0gPSBYWzRdID0gVFJVRQ0KbWVhbihYKQ0KYGBgDQpBIG1hdHJpeCBjYW4gYmUgY29uc3RydWN0ZWQgYnkgdGhlIG1hdHJpeCgpIGNvbW1hbmQ6DQpgYGB7cn0NClggPC0gbWF0cml4KG5yb3c9NCwgbmNvbD0yLCBkYXRhPXNlcSgxLDgpLCBieXJvdyA9IFQpDQpYDQpgYGANClRoZSBhYm92ZSBjYW4gYWxzbyBiZSB3cml0dGVuIGFzOg0KYGBge3J9DQpYIDwtIG1hdHJpeCg0LCAyLCBkYXRhPTE6OCwgYnlyb3cgPSBUUlVFKSAgIyBOb3RlIHRoYXQgZGVmYXVsdCBpcyBieXJvdyA9IEZhbHNlDQpYIA0KYGBgDQpBcnJheXMgYXJlIG1vcmUgZ2VuZXJhbCBkYXRhIHN0cnVjdHVyZXMgdGhhbiB2ZWN0b3JzIGFuZCBtYXRyaWNlcyBpbiB0aGUgc2Vuc2UNCnRoYXQgdGhleSBjYW4gaGF2ZSBtb3JlIHRoYW4gdHdvIGRpbWVuc2lvbnMuIEZvciBpbnN0YW5jZSwNCmBgYHtyfQ0KWCA8LSBhcnJheShkYXRhID0gMToxMiwgZGltID0gYygzLDIsMikpDQpYDQojICBjcmVhdGVzIGEgdGhyZWUtZGltZW5zaW9uYWwgYXJyYXkgd2l0aCAzIMK3IDIgwrcgMiA9IDEyIGVsZW1lbnRzLg0KYGBgDQpBIGxpc3QgY2FuIGNvbnRhaW4gb2JqZWN0cyBvZiBkaWZmZXJlbnQgdHlwZXMuIEZvciBleGFtcGxlLCBhIGxpc3QgZWxlbWVudCBjYW4gDQpiZSBhIHZlY3RvciBvciBtYXRyaXguIExpc3RzIGNhbiBiZSBpbml0aWFsaXplZCBieSB0aGUgY29tbWFuZCBsaXN0IGFuZCBjYW4gZ3Jvdw0KZHluYW1pY2FsbHkuIEl0IGlzIGltcG9ydGFudCB0byB1bmRlcnN0YW5kIHRoYXQgbGlzdCBlbGVtZW50cyBzaG91bGQgYmUgYWNjZXNzZWQNCmJ5IHRoZSBuYW1lIG9mIHRoZSBlbnRyeSB2aWEgdGhlIGRvbGxhciBzaWduIG9yIHVzaW5nIGRvdWJsZSBicmFja2V0czoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIk5CMV9pbnRyb190b19zdGF0aXN0aWNzX2FuZF9kYXRhIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQphdXRob3I6ICJMYXdyZW5jZSBLcnVrcnVibyINCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiANCg0KYGBge3J9DQpwbG90KGNhcnMpDQpgYGANCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLg0KDQoNClRvIHNlZSBhbiBleGFtcGxlIG9mIHRoZSBtZWFuIGZ1bmN0aW9uDQoNCmBgYHtyfQ0KZXhhbXBsZShtZWFuKQ0KYGBgDQpWZWN0b3JzIGNhbiBiZSBhc3NpZ25lZCB0byBhbiDigJxvYmplY3TigJ0uIEZvciBleGFtcGxlLA0KYGBge3J9DQpYIDwtIGMoMiwxMiwyMiwzMiw0MikgICMgYygpIGlzIGEgdmVjdG9yIG9mIGRvdWJsZXMNCnR5cGVvZihYKQ0KYGBgDQoNClNlcXVlbmNlcyBvZiBudW1iZXJzIGNhbiBiZSBjcmVhdGVkIHVzaW5nIHRoZSBzZXEgYW5kIHJlcCBjb21tYW5kcy4gRm9yDQpleGFtcGxlLA0KYGBge3J9DQpzZXEoMSwxMCkgICMgQm90aCBmaXJzdCBhbmQgbGFzdCBpdGVtcyBpbmNsdXNpdmUuDQpyZXAoMSwxMCkgICMgUmVwZWF0cyBmaXJzdCBpdGVtIHNlY29uZCBpdGVtIHRpbWVzDQpgYGANCkJhc2ljIGRhdGEgc3RydWN0dXJlcyBhcmUgdmVjdG9ycywgbWF0cmljZXMsIGFycmF5cywgbGlzdHMsIGFuZCBkYXRhIGZyYW1lcy4gDQpUaGV5IGNhbiBjb250YWluIG51bWVyaWMgdmFsdWVzLCBsb2dpY2FsIHZhbHVlcyBvciBldmVuIGNoYXJhY3RlcnMgKHN0cmluZ3MpLiANCkluIHRoZSBsYXR0ZXIgY2FzZSwgYXJpdGhtZXRpYyBvcGVyYXRpb25zIGFyZSBub3QgYWxsb3dlZC4NCg0KQSBudW1lcmljIHZlY3RvciBvZiBsZW5ndGggNSBjYW4gYmUgY29uc3RydWN0ZWQgYnkgdGhlIGNvbW1hbmQNCmBgYHtyfQ0KWCA8LSB2ZWN0b3IobW9kZT0nbnVtZXJpYycsIGxlbmd0aCA9IDUpDQpYDQpgYGANCkxvZ2ljYWwgdmVjdG9ycyBjb250YWluaW5nIHRoZSB2YWx1ZXMgVFJVRSBhbmQgRkFMU0UgYXJlIGFsc28gcG9zc2libGUuDQpBbHNvIG5vdGUgdGhhdCBSIGxhbmd1YWdlIHN1cHBvcnRzIDEgYmFzZWQgaW5kZXhpbmcsIG5vdCAwIGxpa2UgUHl0aG9uLg0KYGBge3J9DQpYIDwtIHZlY3Rvcihtb2RlPSdsb2dpY2FsJywgbGVuZ3RoID0gNCkgICMgRkFMU0U9MCwgVFJVRT0xDQpYDQpgYGANCmBgYHtyfQ0KWFsxXSA9IFhbMl0gPSBYWzRdID0gVFJVRQ0KbWVhbihYKQ0KYGBgDQpBIG1hdHJpeCBjYW4gYmUgY29uc3RydWN0ZWQgYnkgdGhlIG1hdHJpeCgpIGNvbW1hbmQ6DQpgYGB7cn0NClggPC0gbWF0cml4KG5yb3c9NCwgbmNvbD0yLCBkYXRhPXNlcSgxLDgpLCBieXJvdyA9IFQpDQpYDQpgYGANClRoZSBhYm92ZSBjYW4gYWxzbyBiZSB3cml0dGVuIGFzOg0KYGBge3J9DQpYIDwtIG1hdHJpeCg0LCAyLCBkYXRhPTE6OCwgYnlyb3cgPSBUUlVFKSAgIyBOb3RlIHRoYXQgZGVmYXVsdCBpcyBieXJvdyA9IEZhbHNlDQpYIA0KYGBgDQpBcnJheXMgYXJlIG1vcmUgZ2VuZXJhbCBkYXRhIHN0cnVjdHVyZXMgdGhhbiB2ZWN0b3JzIGFuZCBtYXRyaWNlcyBpbiB0aGUgc2Vuc2UNCnRoYXQgdGhleSBjYW4gaGF2ZSBtb3JlIHRoYW4gdHdvIGRpbWVuc2lvbnMuIEZvciBpbnN0YW5jZSwNCmBgYHtyfQ0KWCA8LSBhcnJheShkYXRhID0gMToxMiwgZGltID0gYygzLDIsMikpDQpYDQojICBjcmVhdGVzIGEgdGhyZWUtZGltZW5zaW9uYWwgYXJyYXkgd2l0aCAzIMK3IDIgwrcgMiA9IDEyIGVsZW1lbnRzLg0KYGBgDQpBIGxpc3QgY2FuIGNvbnRhaW4gb2JqZWN0cyBvZiBkaWZmZXJlbnQgdHlwZXMuIEZvciBleGFtcGxlLCBhIGxpc3QgZWxlbWVudCBjYW4gDQpiZSBhIHZlY3RvciBvciBtYXRyaXguIExpc3RzIGNhbiBiZSBpbml0aWFsaXplZCBieSB0aGUgY29tbWFuZCBsaXN0IGFuZCBjYW4gZ3Jvdw0KZHluYW1pY2FsbHkuIEl0IGlzIGltcG9ydGFudCB0byB1bmRlcnN0YW5kIHRoYXQgbGlzdCBlbGVtZW50cyBzaG91bGQgYmUgYWNjZXNzZWQNCmJ5IHRoZSBuYW1lIG9mIHRoZSBlbnRyeSB2aWEgdGhlIGRvbGxhciBzaWduIG9yIHVzaW5nIGRvdWJsZSBicmFja2V0czoNCg0KYGBge3J9DQpYIDwtIGxpc3Qob25lPWMoMSwyLDMsNCw1KSwgY2Fycz1jKCdtYXpkYScsJ2JlbnRsZXknLCdmZXJyYXJpJywna2lhJykpDQpYDQpgYGANCmBgYHtyfQ0KWFsxXQ0KWCRvbmUNCmBgYA0KTGV0J3MgaW5kZXggY2Fycw0KYGBge3J9DQpYJGNhcnMNCmBgYA0KbGV0J3Mgc2VsZWN0IG9ubHkgRmVycmFyaS4NCmBgYHtyfQ0KWCRjYXJzWzNdDQpgYGANCnNvbWUgbW9yZQ0KYGBge3J9DQpYW1syXV0NCmBgYA0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQo=</div>
 
 
 

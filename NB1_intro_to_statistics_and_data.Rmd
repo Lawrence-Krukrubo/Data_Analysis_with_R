@@ -73,7 +73,26 @@ be a vector or matrix. Lists can be initialized by the command list and can grow
 dynamically. It is important to understand that list elements should be accessed
 by the name of the entry via the dollar sign or using double brackets:
 
-
+```{r}
+X <- list(one=c(1,2,3,4,5), cars=c('mazda','bentley','ferrari','kia'))
+X
+```
+```{r}
+X[1]
+X$one
+```
+Let's index cars
+```{r}
+X$cars
+```
+let's select only Ferrari.
+```{r}
+X$cars[3]
+```
+some more
+```{r}
+X[[2]]
+```
 
 
 
