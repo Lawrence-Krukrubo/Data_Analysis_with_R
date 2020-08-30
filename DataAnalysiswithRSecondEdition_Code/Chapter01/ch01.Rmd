@@ -1,0 +1,102 @@
+---
+title: "Chapter01"
+output: html_notebook
+---
+NOTE:
+1. R uses 1 based indexing
+2. R uses double mod sign for mod (%%)
+
+
+Some functions work with strings
+
+```{r}
+lang.domain <- 'Statistics'
+```
+Let's change it to uppercase
+
+```{r}
+lang.domain <- toupper(lang.domain)
+lang.domain
+```
+Retrieve substring from first character to fourth character 
+```{r}
+substr(lang.domain, 1, 4)
+```
+Substitute every "I" for "Y"
+```{r}
+gsub('I', 'Y', lang.domain)
+```
+Combine character strings
+```{r}
+X <- paste('R does', lang.domain, '!!!')
+X
+```
+FLOW OF CONTROL
+________________
+The most basic flow of control construct is the if statement. The argument to 
+an if statement (what goes between the parentheses) is an expression that 
+returns a logical value. The block of code following the if statement gets 
+executed only if the expression yields TRUE:
+```{r}
+if(2 == 2)
+  print('True')
+```
+It is possible to execute more than one statement if an if condition is 
+triggered; you just have to use curly brackets ({}) 
+```{r}
+if((4/2 == 2) & (8/4 == 2)){
+  print('4/2 == 2')
+  print('8/4 == 2')
+}
+```
+
+It is also possible to specify a block of code that will get executed if the 
+if conditional is FALSE:
+```{r}
+if(5 %% 2 == 0){
+  print('Moded!')
+}else{
+  print('Unmoded!')
+}
+```
+```{r}
+closing.time <- TRUE
+if(closing.time){
+  print('It\'s time to go home.')
+}else{
+  print('You can still stay here')
+}
+
+closing.time <- 0
+
+if(!closing.time){
+  print('We still have some work time')
+}else{
+  print('We gotta go, it\'s closing time!')
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
