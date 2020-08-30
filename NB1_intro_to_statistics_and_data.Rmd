@@ -1,0 +1,113 @@
+---
+title: "NB1_intro_to_statistics_and_data"
+output: html_notebook
+author: "Lawrence Krukrubo"
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+
+To see an example of the mean function
+
+```{r}
+example(mean)
+```
+Vectors can be assigned to an “object”. For example,
+```{r}
+X <- c(2,12,22,32,42)  # c() is a vector of doubles
+typeof(X)
+```
+
+Sequences of numbers can be created using the seq and rep commands. For
+example,
+```{r}
+seq(1,10)  # Both first and last items inclusive.
+rep(1,10)  # Repeats first item second item times
+```
+Basic data structures are vectors, matrices, arrays, lists, and data frames. 
+They can contain numeric values, logical values or even characters (strings). 
+In the latter case, arithmetic operations are not allowed.
+
+A numeric vector of length 5 can be constructed by the command
+```{r}
+X <- vector(mode='numeric', length = 5)
+X
+```
+Logical vectors containing the values TRUE and FALSE are also possible.
+Also note that R language supports 1 based indexing, not 0 like Python.
+```{r}
+X <- vector(mode='logical', length = 4)  # FALSE=0, TRUE=1
+X
+```
+```{r}
+X[1] = X[2] = X[4] = TRUE
+mean(X)
+```
+A matrix can be constructed by the matrix() command:
+```{r}
+X <- matrix(nrow=4, ncol=2, data=seq(1,8), byrow = T)
+X
+```
+The above can also be written as:
+```{r}
+X <- matrix(4, 2, data=1:8, byrow = TRUE)  # Note that default is byrow = False
+X 
+```
+Arrays are more general data structures than vectors and matrices in the sense
+that they can have more than two dimensions. For instance,
+```{r}
+X <- array(data = 1:12, dim = c(3,2,2))
+X
+#  creates a three-dimensional array with 3 · 2 · 2 = 12 elements.
+```
+A list can contain objects of different types. For example, a list element can 
+be a vector or matrix. Lists can be initialized by the command list and can grow
+dynamically. It is important to understand that list elements should be accessed
+by the name of the entry via the dollar sign or using double brackets:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
